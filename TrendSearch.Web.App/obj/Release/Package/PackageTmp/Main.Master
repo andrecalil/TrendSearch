@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="TrendSearch.Web.App.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>trendsearch - See what's going on around the interwebs!</title>
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.slidingmessage.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="content">
+        <h1>trendsearch</h1>
+        <asp:ContentPlaceHolder ID="body" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

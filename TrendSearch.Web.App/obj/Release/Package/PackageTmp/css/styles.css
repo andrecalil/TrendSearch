@@ -1,0 +1,57 @@
+﻿body
+{
+	background: #666 url(/img/bg.png) repeat top left;
+	font-family: Calibri;
+	padding: 0;
+	margin: 0;
+}
+ .textbox
+ {
+ 	border: 1px solid #666;
+ 	width: 200px;
+ }
+ .url
+ {
+ 	width: 150px;
+ }
+ .number
+ {
+ 	width: 50px;
+ }
+ .button
+ {
+ }
+ .search
+ {
+ }
+ .addSource
+ {
+ }
+ #content
+ {
+ 	background: #ccc url(/img/bg_content.png) repeat top left;
+ 	width: 750px;
+ 	margin: 0 auto;
+ 	padding: 20px 10px;
+ }
+ .step
+ {
+ 	font-family: Tahoma;
+ 	font-size: 12px;
+ 	margin: 24px 4px 4px 0;
+ 	font-style: italic;
+ }
+ #step1
+ {
+ }
+ #step2
+ {
+ }
+ #step3
+ {
+ }
+ #messageBox
+ {
+    color:#FFF;
+    font-weight:bold;
+ }

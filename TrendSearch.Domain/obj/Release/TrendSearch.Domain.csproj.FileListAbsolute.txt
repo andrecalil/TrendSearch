@@ -1,0 +1,11 @@
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\TrendSearch.Domain.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\TrendSearch.Domain.pdb
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\Google.GData.Client.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\Google.GData.Extensions.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\Google.GData.YouTube.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\Newtonsoft.Json.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\RssToolkit.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Release\Twitterizer2.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\obj\Release\TrendSearch.Domain.dll
+C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\obj\Release\TrendSearch.Domain.pdb
