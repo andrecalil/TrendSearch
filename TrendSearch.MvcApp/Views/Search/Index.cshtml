@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "TrendSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Header{
+    <script src="../../static/js/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $().ready(function () {
+            $("#searchForm").validate({
+                rules: {
+                    keyWords: {
+                        required: true,
+                        minlength: 2
+                    },
+                    maxTweets: {
+                        required: "#cbTwitter:checked",
+                        digits: true
+                    },
+                    maxVideos: {
+                        required: "#cbYouTube:checked",
+                        digits: true
+                    }
+                },
+                messages: {
+                    keyWords: {
+                        required: " *",
+                        minlength: " At least 2 characters, please"
+                    },
+                    maxTweets: {
+                        required: " *"
+                    },
+                    maxVideos: {
+                        required: " *"
+                    }
+                }
+            });
+
+            $("#searchTwitter").click(function () {
+                if ($("#cbTwitter").is(":checked")) {
+                    $("#maxTweets").attr("disabled", false)["removeClass"]("disabled");
+                }
+                else {
+                    $("#maxTweets").attr("disabled", true)["addClass"]("disabled");
+                }
+            });
+
+            $("#searchYouTube").click(function () {
+                if ($("#cbYouTube").is(":checked")) {
+                    $("#maxVideos").attr("disabled", false)["removeClass"]("disabled");
+                }
+                else {
+                    $("#maxVideos").attr("disabled", true)["addClass"]("disabled");
+                }
+            });
+        });
+    </script>
+}
+<div class="row">
+    <div class="span12">
+        <form action="/Search" method="post" id="searchForm" class="well form-inline">
+            <h3>Give us your keywords</h3>
+            <div class="control-group">
+                <input type="text" class="textbox" name="keyWords" placeholder="What to search?"/>
+            </div>
+            <h3>Choose where to search</h3>
+            <div class="control-group">
+                <label class="checkbox" id="searchTwitter">
+                    <input type="checkbox" title="Twitter" id="cbTwitter" name="searchTwitter" /> Twitter
+                </label>
+                <input type="text" class="input-mini disabled" disabled placeholder="Max" id="maxTweets" name="maxTweets" />
+            </div>
+            <div class="control-group">
+                <label class="checkbox" id="searchYouTube">
+                    <input type="checkbox" id="cbYouTube" name="searchYouTube" /> YouTube
+                </label>
+                <input type="text" class="input-mini disabled" disabled placeholder="Max" name="maxVideos" id="maxVideos"/>
+            </div>
+            <input type="submit" value="Search the trend!" class="btn btn-primary" />
+        </form>
+    </div>
+</div>

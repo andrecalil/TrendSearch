@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendSearch.Domain", "Trend
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendSearch.Web.App", "TrendSearch.Web.App\TrendSearch.Web.App.csproj", "{E7A693F4-E2D7-4952-A270-1E5F2B420815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendSearch.MvcApp", "TrendSearch.MvcApp\TrendSearch.MvcApp.csproj", "{66BA00A6-5CBE-4445-92B2-1DE0E2200F7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{E7A693F4-E2D7-4952-A270-1E5F2B420815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7A693F4-E2D7-4952-A270-1E5F2B420815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7A693F4-E2D7-4952-A270-1E5F2B420815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BA00A6-5CBE-4445-92B2-1DE0E2200F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BA00A6-5CBE-4445-92B2-1DE0E2200F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BA00A6-5CBE-4445-92B2-1DE0E2200F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BA00A6-5CBE-4445-92B2-1DE0E2200F7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

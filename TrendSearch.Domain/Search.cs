@@ -35,7 +35,7 @@ namespace TrendSearch.Domain
                 mRatedResults.AddRange(mSource.SearchAndRate(this.KeyWords));
             }
 
-            return mRatedResults.OrderBy<Result, decimal>(x => x.Rating).OrderByDescending<Result, DateTime?>(x => x.CreatedDate).ToList<Result>();
+            return mRatedResults.OrderByDescending<Result, decimal>(x => x.Rating).ToList<Result>();
         }
     }
 }
