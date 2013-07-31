@@ -1,4 +1,5 @@
 ﻿using System;
+using TrendSearch.Domain.Sources;
 
 namespace TrendSearch.Domain
 {
@@ -10,7 +11,7 @@ namespace TrendSearch.Domain
         /// <param name="pType">Source type</param>
         /// <param name="pMaxResultSearch">Max results to bring from the source</param>
         /// <returns></returns>
-        public static Source GetSource(SourceType pType, int pMaxResultSearch)
+        public static BaseSource GetSource(SourceType pType, int pMaxResultSearch)
         {
             switch (pType)
             {

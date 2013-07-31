@@ -4,6 +4,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using TrendSearch.Domain;
 using System.IO;
+using TrendSearch.Domain.Sources;
 
 namespace TrendSearch.Web.App
 {

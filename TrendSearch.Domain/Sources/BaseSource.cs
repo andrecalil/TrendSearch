@@ -2,16 +2,17 @@
 using System.Linq;
 using System.Xml.Serialization;
 
-namespace TrendSearch.Domain
+namespace TrendSearch.Domain.Sources
 {
     [XmlInclude(typeof(YouTubeSource))]
     [XmlInclude(typeof(TwitterSource))]
     [XmlInclude(typeof(RssSource))]
-    public abstract class Source
+    [XmlRoot("source")]
+    public abstract class BaseSource
     {
-        public Source() { }
+        public BaseSource() { }
 
-        public Source(int pMaxResultSearch)
+        public BaseSource(int pMaxResultSearch)
         {
             this.MaxResultSearch = pMaxResultSearch;
         }

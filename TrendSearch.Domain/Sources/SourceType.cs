@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TrendSearch.Domain
+namespace TrendSearch.Domain.Sources
 {
     public enum SourceType
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using TrendSearch.Domain.Sources;
 
 namespace TrendSearch.Domain
 {

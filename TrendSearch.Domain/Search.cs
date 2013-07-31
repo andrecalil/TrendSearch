@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
+using TrendSearch.Domain.Sources;
 
 namespace TrendSearch.Domain
 {
@@ -10,7 +11,7 @@ namespace TrendSearch.Domain
     {
         public Search()
         {
-            this.Sources = new List<Source>();
+            this.Sources = new List<BaseSource>();
         }
 
         [XmlElement("keyWords")]
@@ -20,13 +21,13 @@ namespace TrendSearch.Domain
         public DateTime SearchedDate { get; set; }
 
         [XmlElement("source")]
-        public List<Source> Sources { get; set; }
+        public List<BaseSource> Sources { get; set; }
 
         public List<Result> SearchAndReate()
         {
             List<Result> mRatedResults = new List<Result>();
 
-            foreach (Source mSource in this.Sources)
+            foreach (BaseSource mSource in this.Sources)
                 mRatedResults.AddRange(mSource.SearchAndRate(this.KeyWords));
 
             return mRatedResults.OrderByDescending<Result, decimal>(x => x.Rating).ToList<Result>();

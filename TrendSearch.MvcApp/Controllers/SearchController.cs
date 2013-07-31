@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrendSearch.Domain;
+using TrendSearch.Domain.Sources;
 
 namespace TrendSearch.MvcApp.Controllers
 {

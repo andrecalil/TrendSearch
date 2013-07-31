@@ -6,9 +6,9 @@ using System.Xml.Serialization;
 using System.Configuration;
 using System;
 
-namespace TrendSearch.Domain
+namespace TrendSearch.Domain.Sources
 {
-    public class YouTubeSource : Source
+    public class YouTubeSource : BaseSource
     {
         public YouTubeSource()
         {}

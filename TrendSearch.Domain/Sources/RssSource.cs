@@ -4,9 +4,9 @@ using RssToolkit.Rss;
 using RssToolkit.Web.WebControls;
 using System.Xml.Serialization;
 
-namespace TrendSearch.Domain
+namespace TrendSearch.Domain.Sources
 {
-    public class RssSource : Source
+    public class RssSource : BaseSource
     {
         public RssSource() { }
 
