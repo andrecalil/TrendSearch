@@ -26,7 +26,7 @@
                 @foreach (TrendSearch.Domain.Result mCurrentResult in Model)
                 {
                     <tr>
-                        <td class="center"><img src="@mCurrentResult.IconURL" /></td>
+                        <td class="center">@mCurrentResult.Type.ToString()</td>
                         <td><a href="@mCurrentResult.URL">@mCurrentResult.Title</a></td>
                         <td class="center">@mCurrentResult.Rating</td>
                     </tr>    

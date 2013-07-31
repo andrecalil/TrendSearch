@@ -26,3 +26,16 @@ C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Web.App\bin\RssToolkit.dll
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Web.App\bin\Google.GData.Client.dll
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Web.App\bin\Google.GData.Extensions.dll
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Web.App\bin\Newtonsoft.Json.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\TrendSearch.Web.App.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\TrendSearch.Web.App.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\AjaxControlToolkit.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\TrendSearch.Domain.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\Google.GData.YouTube.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\RssToolkit.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\Google.GData.Client.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\Google.GData.Extensions.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\TrendSearch.Domain.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\obj\Debug\TrendSearch.Web.App.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\obj\Debug\TrendSearch.Web.App.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Web.App\bin\LinqToTwitter.dll

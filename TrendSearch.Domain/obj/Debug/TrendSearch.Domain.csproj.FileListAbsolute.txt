@@ -20,3 +20,15 @@ C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Debug\Google.GData.You
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Debug\RssToolkit.dll
 C:\Users\Calil\Desktop\TrendSearch\TrendSearch.Domain\bin\Debug\Twitterizer2.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\TrendSearch.Domain.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\TrendSearch.Domain.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Google.GData.Client.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Google.GData.Extensions.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Google.GData.YouTube.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\RssToolkit.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\obj\Debug\TrendSearch.Domain.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\obj\Debug\TrendSearch.Domain.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\LinqToTwitter.dll
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\andre.calil\Source\Repos\TrendSearch\TrendSearch.Domain\bin\Debug\Newtonsoft.Json.xml

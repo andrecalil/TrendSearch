@@ -3,69 +3,58 @@ using Google.GData.Client;
 using Google.GData.YouTube;
 using Google.YouTube;
 using System.Xml.Serialization;
+using System.Configuration;
+using System;
 
 namespace TrendSearch.Domain
 {
     public class YouTubeSource : Source
     {
-        private YouTubeRequest aRequest;
-
         public YouTubeSource()
-        {
-            this.InstantiateYouTubeRequest();
-        }
+        {}
 
-        public YouTubeSource(int pMaxResultSearch)
-            : base(pMaxResultSearch)
-        {
-            this.InstantiateYouTubeRequest();   
-        }
-
-        private void InstantiateYouTubeRequest()
-        {
-            //This is how an application integrates with YouTube. You must have a developer key (that hash over there)
-            YouTubeRequestSettings mRequestSettings = new YouTubeRequestSettings("TrendSearch", "AI39si4L15_ODlB304zllvgYaSXyu0KRvX-yE6c3Yu5ihR_lcWIf5abwh65tP7sr-HR7gxMdNl4pdT00-F7F8-sWHLVJW7ZGhw");
-            mRequestSettings.AutoPaging = false;
-
-            this.aRequest = new YouTubeRequest(mRequestSettings);
-        }
+        public YouTubeSource(int pMaxResultSearch): base(pMaxResultSearch)
+        {}
 
         public override List<Result> Search(string pKeyWords)
         {
-            #region Retrieve videos
+            string youtubeApplicationName = ConfigurationManager.AppSettings["youtube-application-name"];
+            string youtubeDeveloperKey = ConfigurationManager.AppSettings["youtube-developer-key"];
 
-            YouTubeQuery mYouTubeQuery = new YouTubeQuery(YouTubeQuery.DefaultVideoUri)
+            if (string.IsNullOrWhiteSpace(youtubeApplicationName) || string.IsNullOrWhiteSpace(youtubeDeveloperKey))
+                throw new Exception("App was unable to find Youtube credentials on the current settings file. Please add youtube-application-name and youtube-developer-key to the appSettings section.");
+
+            YouTubeRequestSettings requestSettings = new YouTubeRequestSettings(youtubeApplicationName, youtubeDeveloperKey);
+            requestSettings.AutoPaging = false;
+
+            YouTubeRequest youtubeRequest = new YouTubeRequest(requestSettings);
+
+            YouTubeQuery youtubeQuery = new YouTubeQuery(YouTubeQuery.DefaultVideoUri)
             {
                 OrderBy = "viewCount",
                 Query = pKeyWords,
                 NumberToRetrieve = this.MaxResultSearch
             };
 
-            Feed<Video> mVideosResult = this.aRequest.Get<Video>(mYouTubeQuery);
+            Feed<Video> youtubeVideos = youtubeRequest.Get<Video>(youtubeQuery);
 
-            #endregion
+            List<Result> domainResults = new List<Result>();
 
-            List<Result> mDomainResults = new List<Result>();
-
-            #region Convert videos to results
-
-            foreach (Video mVideo in mVideosResult.Entries)
+            foreach (Video video in youtubeVideos.Entries)
             {
-                mDomainResults.Add(
+                domainResults.Add(
                     new Result()
                     {
-                        CreatedDate = mVideo.Updated,
-                        IconURL = SourceType.YouTube.IconURL(),
-                        Text = string.Format("{0} {1}", mVideo.Description, mVideo.Keywords),
-                        Title = mVideo.Title,
-                        URL = mVideo.WatchPage.OriginalString
+                        CreatedDate = video.Updated,
+                        Type = SourceType.YouTube,
+                        Text = string.Format("{0} {1}", video.Description, video.Keywords),
+                        Title = video.Title,
+                        URL = video.WatchPage.OriginalString
                     }
-                    );
+                );
             }
 
-            #endregion
-
-            return mDomainResults;
+            return domainResults;
         }
     }
 }

@@ -10,8 +10,7 @@ namespace TrendSearch.Domain
     {
         public RssSource() { }
 
-        public RssSource(int pMaxResultSearch)
-            : base(pMaxResultSearch)
+        public RssSource(int pMaxResultSearch): base(pMaxResultSearch)
         { }
 
         [XmlAttribute("url")]
@@ -19,8 +18,6 @@ namespace TrendSearch.Domain
 
         public override List<Result> Search(string pKeyWords)
         {
-            #region Retrieve the posts
-
             RssDataSource mRssDataSource = new RssDataSource()
             {
                 Url = this.URL,
@@ -29,43 +26,30 @@ namespace TrendSearch.Domain
 
             mRssDataSource.Rss.SelectItems();
 
-            #endregion
-
             List<Result> mDomainResults = new List<Result>();
 
-            bool mResultHitsSearch;
             StringBuilder mCompleteResult;
 
             foreach (RssItem mRssItem in mRssDataSource.Rss.Channel.Items)
             {
-                #region Result hits search keywords?
-
                 mCompleteResult = new StringBuilder();
                 mCompleteResult.AppendFormat("{0} ",mRssItem.Title);
                 mCompleteResult.AppendFormat("{0} ", mRssItem.Description);
                 mCompleteResult.AppendFormat("{0} ", mRssItem.Categories);
 
-                mResultHitsSearch = this.ResultHitsSearch(mCompleteResult.ToString(), pKeyWords);
-
-                #endregion
-
-                #region If so, create the result
-
-                if (mResultHitsSearch)
+                if (this.ResultHitsSearch(mCompleteResult.ToString(), pKeyWords))
                 {
                     mDomainResults.Add(
                         new Result()
                         {
                             CreatedDate = mRssItem.PubDateParsed,
-                            IconURL = SourceType.RSS.IconURL(),
+                            Type = SourceType.RSS,
                             Text = mRssItem.Description,
                             Title = mRssItem.Title,
                             URL = mRssItem.Link
                         }
                     );
                 }
-
-                #endregion
             }
 
             return mDomainResults;

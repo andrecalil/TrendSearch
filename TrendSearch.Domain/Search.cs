@@ -22,18 +22,12 @@ namespace TrendSearch.Domain
         [XmlElement("source")]
         public List<Source> Sources { get; set; }
 
-        /// <summary>
-        /// Concatenates the results from each source and orders by the rating and creation date
-        /// </summary>
-        /// <returns></returns>
         public List<Result> SearchAndReate()
         {
             List<Result> mRatedResults = new List<Result>();
 
             foreach (Source mSource in this.Sources)
-            {
                 mRatedResults.AddRange(mSource.SearchAndRate(this.KeyWords));
-            }
 
             return mRatedResults.OrderByDescending<Result, decimal>(x => x.Rating).ToList<Result>();
         }

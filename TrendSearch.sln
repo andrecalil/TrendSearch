@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendSearch.Domain", "TrendSearch.Domain\TrendSearch.Domain.csproj", "{C53066A9-478F-4F57-B545-EF55B54275BD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrendSearch.Web.App", "TrendSearch.Web.App\TrendSearch.Web.App.csproj", "{E7A693F4-E2D7-4952-A270-1E5F2B420815}"
